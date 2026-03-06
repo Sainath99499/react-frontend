@@ -13,7 +13,8 @@ function Reg(){
     }
     const submit=async()=>{
         try{
-            const res=await axios.post(`${import.meta.env.VITE_BACKEND_URL}/register`,name)
+            const backendUrl = import.meta.env.VITE_BACKEND_URL || "https://cabsystemsms-1.onrender.com";
+            const res=await axios.post(`${backendUrl}/register`,name)
             alert(res.data)
         }
         catch(xyz){
