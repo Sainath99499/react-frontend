@@ -14,7 +14,7 @@ function Reg(){
     const submit=async()=>{
         console.log("Submit button clicked", name);
         try{
-            const backendUrl = import.meta.env.VITE_BACKEND_URL || "https://cabsystemsms-1.onrender.com";
+            const backendUrl = import.meta.env.VITE_BACKEND_URL || "https://cabsystemsms-1-6s3j.onrender.com";
             console.log("Connecting to:", backendUrl);
             const res=await axios.post(`${backendUrl}/register`,name)
             console.log("Success:", res.data);
